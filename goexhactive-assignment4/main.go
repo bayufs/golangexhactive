@@ -6,7 +6,7 @@ import (
 	"strconv"
 )
 
-type Person struct{ name string }
+type Person struct{ name, alamat, pekerjaan, alasan string }
 
 func main() {
 
@@ -17,17 +17,13 @@ func main() {
 }
 
 func getInput(arg int) {
-	var name = []string{
-		"bayu",
-		"fajar",
-		"sidik",
-		"nugraha",
-		"muthus",
-		"muhamad",
-		"hilmi",
-		"eka",
-		"bintang",
-		"mail"}
+	persons := []*Person{
+		{name: "bayu", alamat: "Jakbar", pekerjaan: "Elite global", alasan: "Pengen bisa"},
+		{name: "hilmi", alamat: "Jaktim", pekerjaan: "Dewan pengawas programmer", alasan: "Belum nanya"},
+	}
 
-	fmt.Println(name[arg])
+	fmt.Println("Nama : ", persons[arg].name)
+	fmt.Println("Alamat : ", persons[arg].alamat)
+	fmt.Println("Pekerjaan : ", persons[arg].pekerjaan)
+	fmt.Println("Alasan : ", persons[arg].alasan)
 }
