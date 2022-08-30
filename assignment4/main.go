@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"sync"
+)
 
 func main() {
 	var db []*User
@@ -19,10 +22,20 @@ func main() {
 			"bintang",
 			"mail"}
 
+	var wg sync.WaitGroup
+	wg.Add(len(persons))
 	for _, val := range persons {
-		result := userSvc.Register(&User{Name: val})
-		fmt.Println(result, "Berhasil didaftarkan")
+
+		go func(name string) {
+
+			result := userSvc.Register(&User{Name: name})
+			fmt.Println(result, "Berhasil didaftarkan")
+			wg.Done()
+
+		}(val)
 	}
+
+	wg.Wait()
 
 	resGet := userSvc.GetUser()
 	fmt.Println("-----------Hasil get user-------------")
