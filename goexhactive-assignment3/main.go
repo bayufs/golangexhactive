@@ -8,8 +8,8 @@ func main() {
 
 	persons := []*Person{{name: "andi"}, {name: "budi"}, {name: "andi"}, {name: "budi"}, {name: "andi"}, {name: "budi"}, {name: "andi"}, {name: "budi"}, {name: "andi"}, {name: "budi"}}
 	printFriends := func(friends []*Person) {
-		for _, p := range friends {
-			fmt.Println(p.name)
+		for index, p := range friends {
+			fmt.Println(index, ":", p.name)
 		}
 	}
 

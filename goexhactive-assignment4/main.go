@@ -20,6 +20,14 @@ func getInput(arg int) {
 	persons := []*Person{
 		{name: "bayu", alamat: "Jakbar", pekerjaan: "Elite global", alasan: "Pengen bisa"},
 		{name: "hilmi", alamat: "Jaktim", pekerjaan: "Dewan pengawas programmer", alasan: "Belum nanya"},
+		{name: "bayu", alamat: "Jakbar", pekerjaan: "Elite global", alasan: "Pengen bisa"},
+		{name: "hilmi", alamat: "Jaktim", pekerjaan: "Dewan pengawas programmer", alasan: "Belum nanya"},
+		{name: "bayu", alamat: "Jakbar", pekerjaan: "Elite global", alasan: "Pengen bisa"},
+		{name: "hilmi", alamat: "Jaktim", pekerjaan: "Dewan pengawas programmer", alasan: "Belum nanya"},
+		{name: "bayu", alamat: "Jakbar", pekerjaan: "Elite global", alasan: "Pengen bisa"},
+		{name: "hilmi", alamat: "Jaktim", pekerjaan: "Dewan pengawas programmer", alasan: "Belum nanya"},
+		{name: "bayu", alamat: "Jakbar", pekerjaan: "Elite global", alasan: "Pengen bisa"},
+		{name: "hilmi", alamat: "Jaktim", pekerjaan: "Dewan pengawas programmer", alasan: "Belum nanya"},
 	}
 
 	fmt.Println("Nama : ", persons[arg].name)
